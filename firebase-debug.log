@@ -1,0 +1,88 @@
+[debug] [2023-09-23T22:17:02.001Z] ----------------------------------------------------------------------
+[debug] [2023-09-23T22:17:02.003Z] Command:       /Users/biancacamargodepaulamelo/.nvm/versions/node/v18.10.0/bin/node /Users/biancacamargodepaulamelo/Library/pnpm/global/5/node_modules/firebase-tools/lib/bin/firebase.js deploy
+[debug] [2023-09-23T22:17:02.004Z] CLI Version:   12.5.4
+[debug] [2023-09-23T22:17:02.004Z] Platform:      darwin
+[debug] [2023-09-23T22:17:02.004Z] Node Version:  v18.10.0
+[debug] [2023-09-23T22:17:02.005Z] Time:          Sat Sep 23 2023 19:17:02 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2023-09-23T22:17:02.006Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-23T22:17:02.083Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-23T22:17:02.083Z] > authorizing via signed-in user (biaahcamargo.bc@gmail.com)
+[debug] [2023-09-23T22:17:02.083Z] [iam] checking project astrologica-3dfdd for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-09-23T22:17:02.085Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/astrologica-3dfdd:testIamPermissions [none]
+[debug] [2023-09-23T22:17:02.086Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/astrologica-3dfdd:testIamPermissions x-goog-quota-user=projects/astrologica-3dfdd
+[debug] [2023-09-23T22:17:02.091Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/astrologica-3dfdd:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-23T22:17:03.162Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/astrologica-3dfdd:testIamPermissions 200
+[debug] [2023-09-23T22:17:03.162Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/astrologica-3dfdd:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-23T22:17:03.163Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/astrologica-3dfdd [none]
+[debug] [2023-09-23T22:17:03.953Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/astrologica-3dfdd 200
+[debug] [2023-09-23T22:17:03.953Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/astrologica-3dfdd {"projectId":"astrologica-3dfdd","projectNumber":"354282319857","displayName":"astrologica","name":"projects/astrologica-3dfdd","resources":{"hostingSite":"astrologica-3dfdd"},"state":"ACTIVE","etag":"1_08d47f8a-9222-4928-aa84-415ea9dd9620"}
+[debug] [2023-09-23T22:17:09.316Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/astrologica-3dfdd/sites pageToken=&pageSize=10
+[debug] [2023-09-23T22:17:10.627Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/astrologica-3dfdd/sites 200
+[debug] [2023-09-23T22:17:10.627Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/astrologica-3dfdd/sites {"sites":[{"name":"projects/astrologica-3dfdd/sites/astrologica-3dfdd","defaultUrl":"https://astrologica-3dfdd.web.app","appId":"1:354282319857:web:950033dde44ffcef8f9e50","type":"DEFAULT_SITE"}]}
+[debug] [2023-09-23T22:17:10.628Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:354282319857:web:950033dde44ffcef8f9e50/config [none]
+[debug] [2023-09-23T22:17:11.839Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:354282319857:web:950033dde44ffcef8f9e50/config 200
+[debug] [2023-09-23T22:17:11.840Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:354282319857:web:950033dde44ffcef8f9e50/config {"projectId":"astrologica-3dfdd","appId":"1:354282319857:web:950033dde44ffcef8f9e50","storageBucket":"astrologica-3dfdd.appspot.com","apiKey":"AIzaSyB9DyAS-eiZUvmE9O9tEneXv_hgoD-bYAg","authDomain":"astrologica-3dfdd.firebaseapp.com","messagingSenderId":"354282319857","measurementId":"G-PJX08J6T03"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] - info Creating an optimized production build...
+
+[info] - info Compiled successfully
+
+[info] - info Linting and checking validity of types...
+
+[info] - info Collecting page data...
+
+[info] - info Generating static pages (0/7)
+
+[info] - info Generating static pages (1/7)
+
+[info] [2023-09-23T22:17:52.566Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+
+[info] ReferenceError: window is not defined
+    at getOrCreateDataLayer (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:12671:23)
+    at factory (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:13532:9)
+    at Component.instanceFactory (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:13739:16)
+    at Provider.getOrInitializeService (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:8525:39)
+    at Provider.initialize (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:8469:31)
+    at initializeAnalytics (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:13581:49)
+    at getAnalytics (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:13560:12)
+    at 6000 (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/app/login/page.js:385:58)
+    at __webpack_require__ (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/webpack-runtime.js:25:42)
+    at M (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.edge.production.min.js:24:46)
+
+[info] 
+Error occurred prerendering page "/login". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at getOrCreateDataLayer (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:12671:23)
+    at factory (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:13532:9)
+    at Component.instanceFactory (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:13739:16)
+    at Provider.getOrInitializeService (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:8525:39)
+    at Provider.initialize (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:8469:31)
+    at initializeAnalytics (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:13581:49)
+    at getAnalytics (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/chunks/378.js:13560:12)
+    at 6000 (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/app/login/page.js:385:58)
+    at __webpack_require__ (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/server/webpack-runtime.js:25:42)
+    at M (/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/node_modules/.pnpm/next@13.4.19_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/react-server-dom-webpack/cjs/react-server-dom-webpack-client.edge.production.min.js:24:46)
+
+[info] - info Generating static pages (3/7)
+
+[info] - info Generating static pages (5/7)
+
+[info] - info Generating static pages (7/7)
+
+[info] 
+> Export encountered errors on following paths:
+	/login/page: /login
+
+[debug] [2023-09-23T22:17:55.728Z] Error: ENOENT: no such file or directory, open '/Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
