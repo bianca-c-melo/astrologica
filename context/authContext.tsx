@@ -32,8 +32,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
 
   const signOut = async () => {
     try {
-      const resp = await firebaseSignOut(auth); 
-      console.log(resp)// Realize o logout usando a função do Firebase
+      await firebaseSignOut(auth); 
     } catch (error) {
       console.error("Erro ao fazer logout:", error);
     }

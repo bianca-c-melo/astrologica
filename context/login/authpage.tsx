@@ -101,8 +101,9 @@ function AuthPage() {
     <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
       <div className=" p-8 rounded shadow-md w-full sm:w-96">
         <h2 className="text-2xl font-semibold mb-6 text-center">
-          {isSignUp ? "Cadastrar" : "Entrar"}
+        Bem Vindo(a) a ASTROLÓGICA
         </h2>
+        <br/>
 
         <form onSubmit={handleForm}>
           <div className="mb-4">
@@ -125,7 +126,7 @@ function AuthPage() {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="password"
+              htmlFor="senha"
               className="block text-sm font-medium text-gray-900"
             >
               Password
@@ -147,6 +148,7 @@ function AuthPage() {
               Esqueceu a senha?
             </a>
           </div>
+          <br/>
           {isSignUpFormOpen && (
             <ModalCadastro
               isOpen={isSignUpFormOpen}
@@ -177,14 +179,14 @@ function AuthPage() {
         </form>
 
         <p className="mt-6 text-center text-gray-500">
-          {isSignUp ? "Não é membro?" : "Já é membro?"}
           <a
             href="#"
             className="font-semibold text-indigo-600 hover:text-indigo-500 ml-1"
           >
-            {isSignUp ? "Faça login" : "Inicie um teste grátis de 14 dias"}
           </a>
         </p>
+        <br />
+        ou Faça login com as redes sociais
         <br />
         <div className="mt-6">
           <Button

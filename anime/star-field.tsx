@@ -6,7 +6,7 @@ const StarField = () => {
     from: { opacity: 1 },
     to: { opacity: 0.8 },
     loop: true,
-    config: { duration: 100 },
+    config: { duration: 6000 },
   });
 
   return (

@@ -3,9 +3,7 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
-import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
-import { AuthContextProvider } from "@/context/authContext";
 
 export const metadata: Metadata = {
   title: {
@@ -34,18 +32,12 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-        //   "min-h-screen bg-background font-sans antialiased",
+          //   "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="">
-            {/* <Navbar /> */}
-            <main className="">
-              {children}
-            </main>
-            <footer className="w-full flex items-center justify-center py-3"></footer>
-          </div>
+          <main className="">{children}</main>
         </Providers>
       </body>
     </html>

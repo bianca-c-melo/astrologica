@@ -5,8 +5,14 @@
 /.pnp
 .pnp.js
 
+.env
+/.vscode/
+
 # testing
 /coverage
+
+firebase.debug.log
+pnpm-lock.yaml
 
 # next.js
 /.next/

@@ -2,7 +2,7 @@
 import React from "react";
 import { useAuthContext } from "../authContext";
 import AuthPage from "./authpage";
-import AppDeck from "@/anime/cards-anime";
+import AppDeck from "@/anime/cards-anime-homepage";
 
 import { Inter, Noto_Color_Emoji, Sunflower } from 'next/font/google'
 import StarField from "@/anime/star-field";

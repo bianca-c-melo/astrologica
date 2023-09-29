@@ -22,7 +22,6 @@ export const CardsNames = {
     "19-TheSun",
     "20-Judgement",
     "21-TheWorld",
-    "CardBacks",
     "Cups01",
     "Cups02",
     "Cups03",
