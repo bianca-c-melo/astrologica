@@ -17,7 +17,7 @@ pnpm-lock.yaml
 # next.js
 /.next/
 /out/
-
+/.firebase/
 # production
 /build
 
