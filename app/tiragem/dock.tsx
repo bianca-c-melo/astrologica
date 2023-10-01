@@ -101,7 +101,8 @@ export function Dock({
         {selectedCards.map((selectedCardIndex, index) => (
           <Card
             key={selectedCardIndex}
-            src={`/Cards-png/${cardNames[selectedCardIndex]}.png`}
+            src={`/../Cards-png/${cardNames[selectedCardIndex]}.png`}
+            // /Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/public/Cards-png/00-TheFool.png
             className={deckPosition[index]}
           />
         ))}
