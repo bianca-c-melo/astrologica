@@ -5,7 +5,7 @@ import { tarotPositions } from "./positions";
 
 function DockApp() {
     const numberOfTarotCards = 78;
-    const cardBack = "/Cards-png/BackCard.jpg";
+    const cardBack = "Cards-png/BackCard.jpg";
     const cardNames = CardsNames.cards;
     const cardsToDraw = 10;
     const selectedTarotSpread = "celticCross";
