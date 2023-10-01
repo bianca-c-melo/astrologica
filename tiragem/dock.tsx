@@ -101,7 +101,7 @@ export function Dock({
         {selectedCards.map((selectedCardIndex, index) => (
           <Card
             key={selectedCardIndex}
-            src={`/Cards-png/${cardNames[selectedCardIndex]}.png`}
+            src={`public/Cards-png/${cardNames[selectedCardIndex]}.png`}
             className={deckPosition[index]}
           />
         ))}
