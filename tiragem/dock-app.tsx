@@ -19,9 +19,9 @@ function DockApp() {
             borderRadius: 2,
             flexWrap: "wrap",
             "& > :not(style)": {
-              m: 1,
-              width: 1900,
-              height: 830,
+              m: 4,
+              width: 1730,
+              height: 790,
             },
             overflow: "hidden",
           }}

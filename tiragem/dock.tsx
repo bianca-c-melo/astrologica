@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "./card";
 import { Button } from "@nextui-org/react";
-import "./styles.modules.css";
+import "./styles.css";
 
 interface DockProps {
   cardsToDraw: number;
@@ -11,7 +11,7 @@ interface DockProps {
   deckPosition: any;
 }
 
-const DOCK_ZOOM_LIMIT = [1, 1.1];
+const DOCK_ZOOM_LIMIT = [0.8, 0.9];
 
 export function Dock({
   numberOfCards,
@@ -54,7 +54,7 @@ export function Dock({
     }
     setHoveredCardIndex(index);
   };
-  const totalWidth = numberOfCards * 21.7;
+  const totalWidth = numberOfCards * 22.3;
   const horizontalPosition = (window.innerWidth - totalWidth) / 2;
 
   return (
@@ -72,7 +72,7 @@ export function Dock({
           }, ${isShuffled ? "shuffle-animation" : ""}`}
           style={{
             transform: `translate(${horizontalPosition + index * 20}px, ${
-              window.innerHeight - 350
+              window.innerHeight - 400
             }px) scale(${
               hoveredCardIndex === index || selectedCards.includes(index)
                 ? DOCK_ZOOM_LIMIT[1]

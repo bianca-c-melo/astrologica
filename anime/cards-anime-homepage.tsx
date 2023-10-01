@@ -23,7 +23,7 @@ const to = (i: number) => ({
 });
 const from = (_i: number) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
 
-function Deck() {
+export default function Deck() {
   const [gone] = useState(() => new Set());
   const [props, api] = useSprings(cards.length, (i) => ({
     ...to(i),
@@ -75,7 +75,7 @@ function Deck() {
       }}
     >
       {props.map(({ x, y, rot, scale }, i) => (
-        <div
+        <animated.div
           className="absolute w-72 h-48 will-change-transform flex items-center justify-center mr-2 top-1 bottom-0"
           key={i}
           style={{ x, y }}
@@ -104,12 +104,8 @@ function Deck() {
                 "0 12.5px 100px -10px rgba(20, 20, 25, 0.4), 0 10px 10px -10px rgba(16, 16, 23, 0.3)",
             }}
           />
-        </div>
+        </animated.div>
       ))}
     </div>
   );
-}
-
-export default function AppDeck() {
-  return <Deck />;
 }
