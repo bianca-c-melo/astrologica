@@ -21,7 +21,7 @@ function DockApp() {
             "& > :not(style)": {
               m: 4,
               width: 1730,
-              height: 790,
+              height: 1000,
             },
             overflow: "hidden",
           }}

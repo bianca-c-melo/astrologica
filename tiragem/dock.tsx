@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "./card";
-import { Button } from "@nextui-org/react";
+import {
+  Button,
+} from "@nextui-org/react";
 import "./styles.css";
 
 interface DockProps {
@@ -11,7 +13,7 @@ interface DockProps {
   deckPosition: any;
 }
 
-const DOCK_ZOOM_LIMIT = [0.8, 0.9];
+const DOCK_ZOOM_LIMIT = [1, 1.1];
 
 export function Dock({
   numberOfCards,
@@ -32,10 +34,13 @@ export function Dock({
 
   const shuffleDeck = () => {
     setIsShuffled(true);
+    const shuffledDeck = [...deck];
+    for (let i = shuffledDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledDeck[i], shuffledDeck[j]] = [shuffledDeck[j], shuffledDeck[i]];
+    }
+    setDeck(shuffledDeck);
     setTimeout(() => {
-      setDeck((prevDeck) => {
-        return prevDeck;
-      });
       setIsShuffled(false);
     }, 1000);
   };
@@ -72,7 +77,7 @@ export function Dock({
           }, ${isShuffled ? "shuffle-animation" : ""}`}
           style={{
             transform: `translate(${horizontalPosition + index * 20}px, ${
-              window.innerHeight - 400
+              window.innerHeight - 150
             }px) scale(${
               hoveredCardIndex === index || selectedCards.includes(index)
                 ? DOCK_ZOOM_LIMIT[1]
@@ -88,7 +93,7 @@ export function Dock({
               isShuffled ? "" : ""
             }`}
           >
-            <Card src={cardBack} className="w-full h-full" />
+            <Card src={cardBack} className="w-full h-full " />
           </div>
         </div>
       ))}

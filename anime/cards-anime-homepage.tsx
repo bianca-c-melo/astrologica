@@ -13,7 +13,6 @@ const cards = [
   // "https://upload.wikimedia.org/wikipedia/commons/1/18/02_La_Lumiere_-_Grand_jeu_de_l%27Oracle_des_Dames.jpg"
 ];
 
-// These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i: number) => ({
   x: 0,
   y: i * -4,

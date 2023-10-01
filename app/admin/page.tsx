@@ -5,7 +5,7 @@ import { useAuthContext } from "@/context/authContext";
 import { User } from "firebase/auth";
 
 export default function Page() {
-  const { user }: { user?: User } = useAuthContext();
+  const{ user } = useAuthContext();
   const router = useRouter();
 
   React.useEffect(() => {

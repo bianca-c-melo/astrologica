@@ -8,6 +8,6 @@ interface CardProps {
 
 export const Card = ({ src, className}: CardProps) => (
   <div>
-    <Image src={src} alt="" width={90} height={200} className={className}/>
+    <Image src={src} alt="" width={100} height={200} className={className}/>
   </div>
 );
