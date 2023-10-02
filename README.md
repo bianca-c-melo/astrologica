@@ -1,4 +1,4 @@
-1-``` pnpm install```
+1- ```pnpm install```
 <br/>
 2- ```pnpm dev```
 
