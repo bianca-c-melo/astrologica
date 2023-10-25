@@ -1,6 +1,6 @@
 1- ```pnpm install```
 <br/>
-2- ```npm install next@latest react@latest react-dom@latest```
+2- ```pnpm install next@latest react@latest react-dom@latest```
 <br/>
 3- ```pnpm dev```
 
