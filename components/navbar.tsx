@@ -100,15 +100,15 @@ export const Navbar = () => {
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Avatar
+              radius="md" 
               icon={<AvatarIcon />}
               classNames={{
                 base: "bg-gradient-to-br from-[#FFB457] to-[#FF705B]",
                 icon: "text-black/80",
               }}
-              isBordered
               as="button"
               isFocusable
-              color="secondary"
+              color="warning"
               name={user?.displayName ? user.displayName : ""}
               size="lg"
               src={user?.photoURL ? user.photoURL : undefined}

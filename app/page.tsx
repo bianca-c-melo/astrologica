@@ -7,9 +7,11 @@ export default function Home() {
   return (
     <>
       <section className=" ">
-        <div className="">
+      <main className="purple-dark text-foreground bg-background">
+      <div className="bg-gradient-to-tl from-lime-100 via-purple-200 to-emerald-100">
           <HomePage />
         </div>
+        </main>
       </section>
     </>
   );

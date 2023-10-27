@@ -13,7 +13,7 @@ function DockApp() {
     const deckPosition = tarotPositions[selectedTarotSpread];
   
     return (
-      <Box sx={{ bgcolor: '#27272a', height: '70vw', width: '98.72vw' }}>
+      <Box sx={{ height: '70vw', width: '98.72vw' }}>
         <EscolherTiragem/>
           <div>
             <Dock

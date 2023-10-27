@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
@@ -42,8 +43,8 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <main className="">{children}</main>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light"}}>
+        <main className="">{children}</main>
         </Providers>
       </body>
     </html>

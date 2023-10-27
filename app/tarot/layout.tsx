@@ -11,7 +11,8 @@ export default function TarotLayout({
 		<>
 		 <Navbar /> 
 		<section >
-			<div>
+			
+			<div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-300 via-stone-300 to-lime-100">
 				{children}
 			</div>
 		</section>
