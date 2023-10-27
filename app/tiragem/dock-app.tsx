@@ -6,7 +6,7 @@ import EscolherTiragem from "./escolher_tiragem";
 
 function DockApp() {
     const numberOfTarotCards = 78;
-    const cardBack = "/images/BackCard.png";
+    const cardBack = "/images/BackCard.jpg";
     const cardNames = CardsNames.cards;
     const cardsToDraw = 10;
     const selectedTarotSpread = "celticCross";

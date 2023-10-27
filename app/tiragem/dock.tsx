@@ -82,14 +82,14 @@ export function Dock({
               {selectedCards.map((selectedCardIndex, index) => (
                 <Card
                   key={selectedCardIndex}
-                  src={`/../Cards-png/${cardNames[selectedCardIndex]}.png`}
+                  // /Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/public/images
+                  src={`/images/${cardNames[selectedCardIndex]}.png`}
                   className={deckPosition[index]}
                 />
               ))}
             </div>
           </Grid>
         </div>
-
       </Container >
     </Grid>
   );
