@@ -89,22 +89,8 @@ export function Dock({
             </div>
           </Grid>
         </div>
-<<<<<<< HEAD
-      ))}
-      <div className="flex items-center justify-center h-screen">
-        {selectedCards.map((selectedCardIndex, index) => (
-          <Card
-            key={selectedCardIndex}
-            src={`/images/${cardNames[selectedCardIndex]}.png`}
-            // /Users/biancacamargodepaulamelo/Documents/git-bia/new-stuffy/my-app/public/Cards-png/00-TheFool.png
-            className={deckPosition[index]}
-          />
-        ))}
-      </div>
-    </div>
-=======
+
       </Container >
     </Grid>
->>>>>>> a4d7204c39f59445b816a2b0ecd4d2841ccab842
   );
 }
