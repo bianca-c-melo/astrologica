@@ -1,15 +1,15 @@
 export const tarotPositions = {
-    celticCross: [
-      "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2", // Posição central
-      "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  rotate-90", // Posição central (com rotação de 90 graus)
-      "absolute top-1/2 left-1/3 -translate-x-4 -translate-y-1/2",
-      "absolute top-1/2 right-1/3 -translate-x-4 -translate-y-1/2",
-      "absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2",
-      "absolute end-1 left-1/2 -translate-x-1/2 ",
-      "absolute top-1/4 right-1/4 -translate-x-6 -translate-y-1/2", // Carta na lateral direita, 1ª 
-      "absolute top-1/3 right-1/4 -translate-x-6 translate-y-4",  // Carta na lateral direita, 2ª 
-      "absolute top-1/5 right-1/4 -translate-x-6 -translate-y-1/2", // Carta na lateral direita, 3ª 
-      "absolute bottom-2 right-1/4 -translate-x-6 -translate-y-1/4",
-    ],
-    // Adicione mais tiragens e suas posições aqui
-  };
+  celticCross: [
+    "w-10 sm:w-20 md:w-24 lg:w-20  absolute mt-56 left-1/2",
+    "w-10 sm:w-20 md:w-24 lg:w-20  absolute mt-56 left-1/2 rotate-90",
+    "w-10 sm:w-20 md:w-24 lg:w-20  absolute mt-20 left-1/2", //carta para cima
+    "w-10 sm:w-20 md:w-24 lg:w-20  absolute mt-80 left-1/2 translate-y-12", //carta para baixo
+    "w-10 sm:w-20 md:w-24 lg:w-20  absolute mt-56 mr-9 right-1/2", //carta para esquerda
+    "w-10 sm:w-20 md:w-25 lg:w-20  absolute mt-56 ml-28 left-1/2 translate-x-1", // carta para direita
+    "w-10 sm:w-20 md:w-25 lg:w-20  absolute mt-96 right-1/4 -translate-x-12 translate-y-14",
+    "w-10 sm:w-20 md:w-25 lg:w-20  absolute mt-60 right-1/4 -translate-x-12 translate-y-14",
+    "w-10 sm:w-20 md:w-25 lg:w-20  absolute mt-24 right-1/4 -translate-x-12 translate-y-14",
+    "w-10 sm:w-20 md:w-25 lg:w-20  absolute mt-16 right-1/4 -translate-x-12 -translate-y-14",
+  ],
+  // Adicione mais tiragens e suas posições aqui
+};
