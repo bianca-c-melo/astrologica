@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "./card";
-import {
-  Button,
-} from "@nextui-org/react";
 import "./styles.css";
+import { Container, Grid } from "@mui/material";
 
 interface DockProps {
   cardsToDraw: number;
@@ -24,26 +22,12 @@ export function Dock({
 }: DockProps): React.JSX.Element {
   const [hoveredCardIndex, setHoveredCardIndex] = useState<number | null>(null);
   const [selectedCards, setSelectedCards] = useState<number[]>([]);
-  const [isShuffled, setIsShuffled] = useState(false);
   const [deck, setDeck] = useState<number[]>([]); // Representa o índice das cartas no deck
 
   useEffect(() => {
     // Inicializa o deck quando o componente é montado
     setDeck(Array.from({ length: numberOfCards }, (_, index) => index));
   }, [numberOfCards]);
-
-  const shuffleDeck = () => {
-    setIsShuffled(true);
-    const shuffledDeck = [...deck];
-    for (let i = shuffledDeck.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffledDeck[i], shuffledDeck[j]] = [shuffledDeck[j], shuffledDeck[i]];
-    }
-    setDeck(shuffledDeck);
-    setTimeout(() => {
-      setIsShuffled(false);
-    }, 1000);
-  };
 
   const handleClickCard = (index: number) => {
     if (selectedCards.includes(index)) {
@@ -59,43 +43,53 @@ export function Dock({
     }
     setHoveredCardIndex(index);
   };
-  const totalWidth = numberOfCards * 22.3;
+  const totalWidth = numberOfCards * 15;
   const horizontalPosition = (window.innerWidth - totalWidth) / 2;
 
   return (
-    <div className="">
-      <div className="justify-center">
-        <Button color="warning" onClick={shuffleDeck}>
-          Embaralhar
-        </Button>
-      </div>
-      {Array.from({ length: numberOfCards }).map((_, index) => (
-        <div
-          key={index}
-          className={`absolute transition-transform transform duration-300 ease-in-out cursor-pointer ${
-            selectedCards.includes(index) ? "selected-card" : ""
-          }, ${isShuffled ? "shuffle-animation" : ""}`}
-          style={{
-            transform: `translate(${horizontalPosition + index * 20}px, ${
-              window.innerHeight - 150
-            }px) scale(${
-              hoveredCardIndex === index || selectedCards.includes(index)
-                ? DOCK_ZOOM_LIMIT[1]
-                : DOCK_ZOOM_LIMIT[0]
-            })`,
-          }}
-          onMouseOver={() => setHoveredCardIndex(index)}
-          onMouseOut={() => setHoveredCardIndex(null)}
-          onClick={() => handleClickCard(index)}
-        >
-          <div
-            className={`w-24 h-32 bg-white rounded shadow-md ${
-              isShuffled ? "" : ""
-            }`}
-          >
-            <Card src={cardBack} className="w-full h-full " />
-          </div>
+    <Grid>
+      <Container fixed>
+        <div className="">
+          <Grid>
+            <div className="">
+              {Array.from({ length: numberOfCards }).map((_, index) => (
+                <div
+                  key={index}
+                  className={`absolute transition-transform duration-300 ease-in-out cursor-pointer ${selectedCards.includes(index) ? "selected-card" : ""
+                    }`}
+                  style={{
+                    transform: `translate(${horizontalPosition + index * 10}px, ${window.innerHeight - 0
+                      }px) scale(${hoveredCardIndex === index || selectedCards.includes(index)
+                        ? DOCK_ZOOM_LIMIT[1]
+                        : DOCK_ZOOM_LIMIT[0]
+                      })`,
+                  }}
+                  onMouseOver={() => setHoveredCardIndex(index)}
+                  onMouseOut={() => setHoveredCardIndex(null)}
+                  onClick={() => handleClickCard(index)}
+                >
+                  <div
+                    className={`bg-white rounded shadow-md mb-20`}
+                  >
+                    <Card src={cardBack} className="" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Grid>
+          <Grid>
+            <div className="justify-start">
+              {selectedCards.map((selectedCardIndex, index) => (
+                <Card
+                  key={selectedCardIndex}
+                  src={`/../Cards-png/${cardNames[selectedCardIndex]}.png`}
+                  className={deckPosition[index]}
+                />
+              ))}
+            </div>
+          </Grid>
         </div>
+<<<<<<< HEAD
       ))}
       <div className="flex items-center justify-center h-screen">
         {selectedCards.map((selectedCardIndex, index) => (
@@ -108,5 +102,9 @@ export function Dock({
         ))}
       </div>
     </div>
+=======
+      </Container >
+    </Grid>
+>>>>>>> a4d7204c39f59445b816a2b0ecd4d2841ccab842
   );
 }
