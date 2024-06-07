@@ -3,12 +3,12 @@ import { useSprings, animated, to as interpolate } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 
 const cards = [
-  // "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
-  // "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
-  // "https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg",
-  // "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg",
-  // "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg",
-  // "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
   // "https://upload.wikimedia.org/wikipedia/commons/1/18/02_La_Lumiere_-_Grand_jeu_de_l%27Oracle_des_Dames.jpg"
 ];
@@ -91,14 +91,14 @@ export default function Deck() {
               ),
               backgroundImage: `url(${cards[i]})`,
               backgroundColor: "white",
-              backgroundSize: "auto 85%",
+              backgroundSize: "auto 87%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center center",
-              width: "45vh",
+              width: "47vh",
               maxWidth: "300px",
               height: "85vh",
               maxHeight: "570px",
-              borderRadius: "10px",
+              borderRadius: "15px",
               boxShadow:
                 "0 12.5px 100px -10px rgba(20, 20, 25, 0.4), 0 10px 10px -10px rgba(16, 16, 23, 0.3)",
             }}

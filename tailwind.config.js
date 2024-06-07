@@ -16,10 +16,10 @@ module.exports = {
   darkMode: "class",
   plugins: [nextui({themes: {
     "purple-dark": {
-      extend: "dark",
+      extend: "light",
       colors: {
         background: "#0D001A",
-        foreground: "#ffffff",
+        foreground: "#520F83",
         primary: {
           50: "#3B096C",
           100: "#520F83",
@@ -32,7 +32,7 @@ module.exports = {
           800: "#FDD5F9",
           900: "#FEECFE",
           DEFAULT: "#DD62ED",
-          foreground: "#ffffff",
+          foreground: "#520F83",
         },
         focus: "#F182F6",
       },
